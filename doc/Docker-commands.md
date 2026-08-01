@@ -34,6 +34,15 @@ docker pull python:3.14
 # 推送镜像到仓库
 docker push my-fastapi-app:latest
 
+# 登录阿里云私有仓库
+docker login --username=ericmiao crpi-ckze2swpfquw5fy5.cn-hangzhou.personal.cr.aliyuncs.com
+
+# 构建并推送镜像到阿里云私有仓库
+docker build -t crpi-ckze2swpfquw5fy5.cn-hangzhou.personal.cr.aliyuncs.com/ericagent/my-agent .
+docker push crpi-ckze2swpfquw5fy5.cn-hangzhou.personal.cr.aliyuncs.com/ericagent/my-agent
+# 拉取阿里云私有仓库镜像
+docker pull crpi-ckze2swpfquw5fy5.cn-hangzhou.personal.cr.aliyuncs.com/ericagent/my-agent
+
 # 删除镜像
 docker rmi my-fastapi-app
 
