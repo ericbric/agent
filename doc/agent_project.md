@@ -49,9 +49,10 @@ agent/
 ```bash
 # 激活虚拟环境
 source venv/bin/activate
-
+source agentvenv/bin/activate
 # 启动 FastAPI 服务
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+uvicorn tests.test_api:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 ## 运行测试
